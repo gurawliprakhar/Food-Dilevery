@@ -1,21 +1,26 @@
 package com.velamdir.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Category {
+@NoArgsConstructor
+public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String name;
-    @JsonIgnore
     @ManyToOne
-    private Restaurant restaurant;
+    private User customer;
+    private Long total;
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<CartItem> item = new ArrayList<>();
+
+
 }

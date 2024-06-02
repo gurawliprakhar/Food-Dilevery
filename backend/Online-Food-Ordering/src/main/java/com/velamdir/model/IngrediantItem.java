@@ -10,12 +10,15 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Category {
+public class IngrediantItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    @ManyToOne
+    private IngredientCategory category;
     @JsonIgnore
     @ManyToOne
     private Restaurant restaurant;
+    private boolean inStock = true;
 }
