@@ -12,7 +12,7 @@ public interface RestaurantService {
     public Restaurant updateRestaurant(Long restaurantId, CreatedRestarantRequest updatedRestaurant) throws Exception;
     public void deleteRestaurant(Long restaurantId) throws Exception;
     public List <Restaurant> getAllRestaurant();
-    public List <Restaurant> searchRestaurant();
+    public List <Restaurant> searchRestaurant(String keyword);
     public Restaurant findRestaurantById(Long id) throws Exception;
     public Restaurant getRestaurantByUserID(Long userId) throws Exception;
     public RestaurantDto addToFavorites(Long restaurantId, User user) throws Exception;
