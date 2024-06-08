@@ -19,10 +19,8 @@ import java.util.Optional;
 public class RestaurantServiceImp implements RestaurantService{
     @Autowired
     private RestaurantRepository restaurantRepository;
-
     @Autowired
     private AddressRepository addressRepository;
-
     @Autowired
     private UserRepository userRepository;
 
@@ -32,14 +30,14 @@ public class RestaurantServiceImp implements RestaurantService{
         Restaurant restaurant = new Restaurant();
         restaurant.setAddress(address);
         restaurant.setContactInformation(req.getContactInformation());
-        restaurant.getCuisineType();
+        restaurant.setCuisineType(req.getCuisineType());
         restaurant.setDescription(req.getDescription());
         restaurant.setImages(req.getImages());
         restaurant.setName(req.getName());
         restaurant.setOpeningHours(req.getOpeningHours());
         restaurant.setRegistrationDate(LocalDateTime.now());
         restaurant.setOwner(user);
-        return restaurant;
+        return restaurantRepository.save(restaurant);
     }
 
     @Override
@@ -104,10 +102,19 @@ public class RestaurantServiceImp implements RestaurantService{
         dto.setTitle(restaurant.getName());
         dto.setId(restaurantId);
 
-        if(user.getFavorites().contains(dto)){
-            user.getFavorites().remove(dto);
+        boolean isFavorited = false;
+        List<RestaurantDto> favorites = user.getFavorites();
+        for(RestaurantDto favorite : favorites) {
+            if(favorite.getId().equals(restaurantId)) {
+                isFavorited = true;
+                break;
+            }
         }
-        else user.getFavorites().add(dto);
+        if(isFavorited){
+            favorites.removeIf(favorite -> favorite.getId().equals(restaurantId));
+        }else{
+            favorites.add(dto);
+        }
 
         userRepository.save(user);
         return dto;
@@ -119,4 +126,5 @@ public class RestaurantServiceImp implements RestaurantService{
         restaurant.setOpen(!restaurant.isOpen());
         return restaurantRepository.save(restaurant);
     }
+
 }

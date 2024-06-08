@@ -33,4 +33,105 @@ public class Food {
     @ManyToMany
     private List<IngrediantItem> ingrediant = new ArrayList<>();
     private Date creationDate;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDesciption() {
+        return desciption;
+    }
+
+    public void setDesciption(String desciption) {
+        this.desciption = desciption;
+    }
+
+    public Long getPrice() {
+        return price;
+    }
+
+    public void setPrice(Long price) {
+        this.price = price;
+    }
+
+    public Category getFoodCategory() {
+        return foodCategory;
+    }
+
+    public void setFoodCategory(Category foodCategory) {
+        this.foodCategory = foodCategory;
+    }
+
+    public List<String> getImages() {
+        return images;
+    }
+
+    public void setImages(List<String> images) {
+        this.images = images;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
+    public Restaurant getRestaurant() {
+        return restaurant;
+    }
+
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
+    }
+
+    public boolean isVegetarian() {
+        return isVegetarian;
+    }
+
+    public void setVegetarian(boolean vegetarian) {
+        isVegetarian = vegetarian;
+    }
+
+    public boolean isSeasonal(boolean sessional) {
+        return isSeasonal;
+    }
+
+    public void setSeasonal(boolean seasonal) {
+        isSeasonal = seasonal;
+    }
+
+    public List<IngrediantItem> getIngrediant() {
+        return ingrediant;
+    }
+
+    public void setIngrediant(List<IngrediantItem> ingrediant) {
+        this.ingrediant = ingrediant;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
+    }
+
+
+    public boolean isSeasonal() {
+        return isSeasonal;
+    }
 }
