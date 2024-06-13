@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service
@@ -36,7 +35,7 @@ public class FoodServiceImp implements FoodService{
     }
 
     @Override
-    public void deleleteFood(Long foodId) throws Exception {
+    public void deleteFood(Long foodId) throws Exception {
         Food food = findFoodById(foodId);
         food.setRestaurant(null);
         foodRepository.save(food);

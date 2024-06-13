@@ -24,4 +24,35 @@ public class IngredientCategory {
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<IngrediantItem> ingredients = new ArrayList<>();
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public Restaurant getRestaurant() {
+        return restaurant;
+    }
+
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
+    }
+
+    public List<IngrediantItem> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(List<IngrediantItem> ingredients) {
+        this.ingredients = ingredients;
+    }
 }
