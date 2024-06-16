@@ -31,8 +31,8 @@ public class Order {
     @OneToMany
     private List<OrderItem> items;
     //private Payment payment;
-    private int totalItem;
-    private int totalPrice;
+    private Long totalItem;
+    private Long totalPrice;
 
     public Long getId() {
         return id;
@@ -98,19 +98,19 @@ public class Order {
         this.items = items;
     }
 
-    public int getTotalItem() {
+    public Long getTotalItem() {
         return totalItem;
     }
 
-    public void setTotalItem(int totalItem) {
-        this.totalItem = totalItem;
+    public void setTotalItem(Long totalItem) {
+        this.totalItem = (long) totalItem;
     }
 
-    public int getTotalPrice() {
+    public Long getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(int totalPrice) {
+    public void setTotalPrice(Long totalPrice) {
         this.totalPrice = totalPrice;
     }
 }

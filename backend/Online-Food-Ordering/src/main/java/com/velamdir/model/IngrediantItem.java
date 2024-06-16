@@ -57,7 +57,7 @@ public class IngrediantItem {
         return inStock;
     }
 
-    public static void setInStock(boolean inStock) {
+    public void setInStock(boolean inStock) {
         this.inStock = inStock;
     }
 
