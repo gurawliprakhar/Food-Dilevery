@@ -1,3 +1,5 @@
+Sure, here's the updated README with the provided content integrated:
+
 # Food Delivery App
 
 This is a Food Delivery Application developed using Spring Boot for the backend and React for the frontend. The application facilitates food ordering, user authentication, and management of food items, categories, orders, and restaurants.
@@ -112,7 +114,17 @@ src
 │   │           ├── CategoryService.java
 │   │           ├── CategoryServiceImpl.java
 │   │           ├── CustomerUserDetailsService.java
-│   │           └── FoodService.java
+│   │           ├── FoodService.java
+│   │           ├── FoodServiceImpl.java
+│   │           ├── IngredientService.java
+│   │           ├── IngredientServiceImpl.java
+│   │           ├── OrderService.java
+│   │           ├── OrderServiceImpl.java
+│   │           ├── RestaurantService.java
+│   │           ├── RestaurantServiceImpl.java
+│   │           └── UserService.java
+│   │           └── UserServiceImpl.java
+│   │           └── OnlineFoodOrderingAppliaction.java
 │   └── resources
 │       └── application.properties
 ```
