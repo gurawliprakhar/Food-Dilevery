@@ -134,22 +134,30 @@ src
 The frontend React application should follow a standard structure with components, services for API calls, and Redux for state management.
 
 ```
-src
-├── components
-│   ├── Auth
-│   ├── Cart
-│   ├── Food
-│   ├── Home
-│   └── Restaurant
-├── redux
-│   ├── actions
-│   ├── reducers
-│   └── store.js
-└── services
-    ├── authService.js
-    ├── cartService.js
-    ├── foodService.js
-    └── restaurantService.js
+frontend/
+├── node_modules/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+└── src/
+    ├── component/
+    │   └── Navbar/
+    │       └── Navbar.js
+    ├── Theme/
+    │   └── DarkTheme.js
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.SVG
+    ├── reportWebVitals.js
+    └── setupTests.js
+
 ```
 
 ## Installation
