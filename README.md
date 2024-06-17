@@ -1,4 +1,3 @@
-Sure, here's the updated README with the provided content integrated:
 
 # Food Delivery App
 
@@ -253,10 +252,5 @@ frontend/
     ```
 5. Open a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 Feel free to contribute to the project by submitting pull requests or reporting issues. Your feedback and suggestions are highly appreciated!
