@@ -147,6 +147,7 @@ frontend/
     │   └── Home/
     │       └── Home.js
     │       └── Home.css
+    │       └── MutiItemCarasoul.jsx
     │   └── Navbar/
     │       └── Navbar.js
     │       └── Navbar.css
