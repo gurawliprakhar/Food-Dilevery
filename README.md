@@ -146,6 +146,7 @@ frontend/
     ├── component/
     │   └── Home/
     │       └── Home.js
+    │       └── Home.css
     │   └── Navbar/
     │       └── Navbar.js
     │       └── Navbar.css
