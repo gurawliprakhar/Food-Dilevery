@@ -144,8 +144,11 @@ frontend/
 │   └── robots.txt
 └── src/
     ├── component/
+    │   └── Home/
+    │       └── Home.js
     │   └── Navbar/
     │       └── Navbar.js
+    │       └── Navbar.css
     ├── Theme/
     │   └── DarkTheme.js
     ├── App.css
