@@ -1,4 +1,3 @@
-Sure, here's the updated README with the provided content integrated:
 
 # Food Delivery App
 
@@ -134,22 +133,37 @@ src
 The frontend React application should follow a standard structure with components, services for API calls, and Redux for state management.
 
 ```
-src
-├── components
-│   ├── Auth
-│   ├── Cart
-│   ├── Food
-│   ├── Home
-│   └── Restaurant
-├── redux
-│   ├── actions
-│   ├── reducers
-│   └── store.js
-└── services
-    ├── authService.js
-    ├── cartService.js
-    ├── foodService.js
-    └── restaurantService.js
+frontend/
+├── node_modules/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+└── src/
+    ├── component/
+    │   └── Home/
+    │       └── Home.js
+    │       └── Home.css
+    │       └── Carasoul.jsx
+    │       └── topMeel.js
+    │       └── MutiItemCarasoul.jsx
+    │   └── Navbar/
+    │       └── Navbar.js
+    │       └── Navbar.css
+    ├── Theme/
+    │   └── DarkTheme.js
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.SVG
+    ├── reportWebVitals.js
+    └── setupTests.js
+
 ```
 
 ## Installation
@@ -245,10 +259,5 @@ src
     ```
 5. Open a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 Feel free to contribute to the project by submitting pull requests or reporting issues. Your feedback and suggestions are highly appreciated!
