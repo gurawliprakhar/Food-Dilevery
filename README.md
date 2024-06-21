@@ -155,6 +155,7 @@ frontend/
     │       └── Navbar.css
     │   └── Restaurant/
     │       └── RestaurantCard.jsx
+    │       └── RestaurantDetails.jsx
     ├── Theme/
     │   └── DarkTheme.js
     ├── App.css
