@@ -6,6 +6,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Radio from "@mui/material/Radio";
 import { Divider, Grid, Typography } from "@mui/material";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import MenuCard from "./MenuCard";
 
 const categories = ["pizza", "biryani", "burger", "chiken", "rice"];
 
@@ -15,6 +16,8 @@ const foodTypes = [
   { label: "Non-Vegetarian", value: "non_vegetarian" },
   { label: "Seasonal", value: "seasonal" },
 ];
+
+const menu=[1,1,1,1,1,1];
 
 const RestaurantDetails = () => {
   const [foodType, setFoodType] = useState("all");
@@ -85,7 +88,7 @@ const RestaurantDetails = () => {
               </Typography>
 
               <FormControl className="py-10 space-y-5" component={"fieldset"}>
-                <RadioGroup onChange={handleFilter} name="food_type" value={foodTypes}>
+                <RadioGroup onChange={handleFilter} name="food_type" value={foodType}>
                   {foodTypes.map((item) => (
                     <FormControlLabel
                       key={item.value} 
@@ -104,7 +107,7 @@ const RestaurantDetails = () => {
               </Typography>
 
               <FormControl className="py-10 space-y-5" component={"fieldset"}>
-                <RadioGroup onChange={handleFilter} name="food_type" value={foodTypes}>
+                <RadioGroup onChange={handleFilter} name="food_type" value={categories}>
                   {categories.map((item) => (
                     <FormControlLabel
                       key={item} 
@@ -119,7 +122,9 @@ const RestaurantDetails = () => {
           </div>
         </div>
         
-        <div className="space-y-5 lg:w-[80%] lg:pl-10">menu</div>
+        <div className="space-y-5 lg:w-[80%] lg:pl-10">
+          {menu.map((item)=><MenuCard/>)}
+          </div>
       </section>
     </div>
   );
