@@ -156,6 +156,7 @@ frontend/
     │   └── Restaurant/
     │       └── RestaurantCard.jsx
     │       └── RestaurantDetails.jsx
+    │       └── ManuCard.jsx
     ├── Theme/
     │   └── DarkTheme.js
     ├── App.css
