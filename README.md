@@ -144,6 +144,9 @@ frontend/
 │   └── robots.txt
 └── src/
     ├── component/
+    │   └── Cart/
+    │       └── Cart.jsx
+    │       └── CartItem.jsx
     │   └── Home/
     │       └── Home.js
     │       └── Home.css
