@@ -145,6 +145,7 @@ frontend/
 └── src/
     ├── component/
     │   └── Cart/
+   │       └── AddressCard.jsx
     │       └── Cart.jsx
     │       └── CartItem.jsx
     │   └── Home/
