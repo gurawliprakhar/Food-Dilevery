@@ -158,7 +158,8 @@ frontend/
     │       └── Navbar.js
     │       └── Navbar.css
     │   └── Profile/
-     │       └── Profile.jsx
+    │       └── Profile.jsx
+    │       └── ProfileNavigation.jsx
     │   └── Restaurant/
     │       └── RestaurantCard.jsx
     │       └── RestaurantDetails.jsx
