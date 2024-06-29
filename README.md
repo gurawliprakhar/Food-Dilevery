@@ -160,6 +160,7 @@ frontend/
     │   └── Profile/
     │       └── Favorites.jsx
     │       └── Address.jsx
+    │       └── Event.jsx
     │       └── Order.jsx
     │       └── UserProfile.jsx
     │       └── Profile.jsx
