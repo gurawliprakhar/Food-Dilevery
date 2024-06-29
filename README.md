@@ -145,7 +145,7 @@ frontend/
 └── src/
     ├── component/
     │   └── Cart/
-   │       └── AddressCard.jsx
+    │       └── AddressCard.jsx
     │       └── Cart.jsx
     │       └── CartItem.jsx
     │   └── Home/
@@ -158,6 +158,7 @@ frontend/
     │       └── Navbar.js
     │       └── Navbar.css
     │   └── Profile/
+    │       └── Favorites.jsx
     │       └── Address.jsx
     │       └── Order.jsx
     │       └── UserProfile.jsx
