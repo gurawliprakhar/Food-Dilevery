@@ -145,7 +145,7 @@ frontend/
 └── src/
     ├── component/
     │   └── Cart/
-   │       └── AddressCard.jsx
+    │       └── AddressCard.jsx
     │       └── Cart.jsx
     │       └── CartItem.jsx
     │   └── Home/
@@ -157,10 +157,20 @@ frontend/
     │   └── Navbar/
     │       └── Navbar.js
     │       └── Navbar.css
+    │   └── Profile/
+    │       └── Favorites.jsx
+    │       └── Address.jsx
+    │       └── Event.jsx
+    │       └── Order.jsx
+    │       └── UserProfile.jsx
+    │       └── Profile.jsx
+    │       └── ProfileNavigation.jsx
     │   └── Restaurant/
     │       └── RestaurantCard.jsx
     │       └── RestaurantDetails.jsx
     │       └── ManuCard.jsx
+    ├── Routers/
+    │       └── CustomerRouter.jsx
     ├── Theme/
     │   └── DarkTheme.js
     ├── App.css
