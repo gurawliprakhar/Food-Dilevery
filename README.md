@@ -158,6 +158,7 @@ frontend/
     │       └── Navbar.js
     │       └── Navbar.css
     │   └── Profile/
+    │       └── EventCards.jsx
     │       └── Favorites.jsx
     │       └── Address.jsx
     │       └── Event.jsx
