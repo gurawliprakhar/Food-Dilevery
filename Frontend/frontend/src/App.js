@@ -17,7 +17,7 @@ function App() {
       {/*<Home/>*/}
       {/*<RestaurantDetails>*/}
       {/*<Cart/>*/}
-      {/*<Profile/> */} 
+      {/*<Profile/>*/ } 
       <CustomerRoute/>
     </ThemeProvider>
   );

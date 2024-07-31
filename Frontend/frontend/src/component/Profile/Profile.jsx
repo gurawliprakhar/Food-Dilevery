@@ -10,7 +10,7 @@ import { Orders } from "./Orders";
 const Profile = () => {
   return (
     <div className="lg:flex justify-between">
-      <div className="sticky h-[80vh] lg:w-[20%]">
+      <div className="sticky h-[80vh] lg:w-[20%] ">
         <ProfileNavigation />
       </div>
       <div className="lg:w-[80%]">
