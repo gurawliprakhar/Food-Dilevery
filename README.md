@@ -146,6 +146,7 @@ frontend/
     ├── component/
     │   └── Auth/
     │       └── Auth.jsx
+    │       └── RegisterForm.jsx
     │       └── LoginForm.jsx
     │   └── Cart/
     │       └── AddressCard.jsx
