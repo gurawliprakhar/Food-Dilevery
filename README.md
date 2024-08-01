@@ -144,6 +144,10 @@ frontend/
 │   └── robots.txt
 └── src/
     ├── component/
+    │   └── Auth/
+    │       └── Auth.jsx
+    │       └── RegisterForm.jsx
+    │       └── LoginForm.jsx
     │   └── Cart/
     │       └── AddressCard.jsx
     │       └── Cart.jsx
