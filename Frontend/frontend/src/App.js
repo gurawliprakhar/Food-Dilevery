@@ -8,6 +8,7 @@ import RestaurantDetails from "./component/Restaurant/RestaurantDetails";
 import Cart from "./component/Cart/Cart";
 import Profile from "./component/Profile/Profile";
 import { CustomerRoute } from "./Routers/CustomerRoute";
+import { Auth } from "./component/Auth/Auth";
 
 function App() {
   return (

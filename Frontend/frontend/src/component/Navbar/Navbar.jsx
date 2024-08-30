@@ -2,7 +2,7 @@ import React from "react";
 import { Avatar, Badge, Box, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { pink } from "@mui/material/colors";
+import PersonIcon from '@mui/icons-material/Person';
 import "./Navbar.css";
 
 export const Navbar = () => {
@@ -23,7 +23,12 @@ export const Navbar = () => {
           </IconButton>
         </div>
         <div className="">
-          <Avatar sx={{ bgcolor: "white", color: "pink.A400" }}>V</Avatar>
+          {false?<Avatar sx={{ bgcolor: "white", color: "pink.A400" }}>V</Avatar>:
+          <IconButton onClick={()=>
+            
+          }>
+            <PersonIcon/>
+          </IconButton>}
         </div>
         <div className="">
           <IconButton>
