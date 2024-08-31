@@ -145,38 +145,43 @@ frontend/
 └── src/
     ├── component/
     │   └── Auth/
-    │       └── Auth.jsx
-    │       └── RegisterForm.jsx
-    │       └── LoginForm.jsx
+    │   |    └── Auth.jsx
+    │   |    └── RegisterForm.jsx
+    │   |    └── LoginForm.jsx
     │   └── Cart/
-    │       └── AddressCard.jsx
-    │       └── Cart.jsx
-    │       └── CartItem.jsx
+    │   |    └── AddressCard.jsx
+    │   |    └── Cart.jsx
+    │   |   └── CartItem.jsx
     │   └── Home/
-    │       └── Home.js
-    │       └── Home.css
-    │       └── Carasoul.jsx
-    │       └── topMeel.js
-    │       └── MutiItemCarasoul.jsx
+    │   |    └── Home.js
+    │   |    └── Home.css
+    │   |    └── Carasoul.jsx
+    │   |    └── topMeel.js
+    │   |    └── MutiItemCarasoul.jsx
     │   └── Navbar/
-    │       └── Navbar.js
-    │       └── Navbar.css
+    │   |    └── Navbar.js
+    │   |   └── Navbar.css
     │   └── Profile/
-    │       └── EventCards.jsx
-    │       └── Favorites.jsx
-    │       └── Address.jsx
-    │       └── Event.jsx
-    │       └── Order.jsx
-    │       └── OrderCard.jsx
-    │       └── UserProfile.jsx
-    │       └── Profile.jsx
-    │       └── ProfileNavigation.jsx
+    │   |   └── EventCards.jsx
+    │   |   └── Favorites.jsx
+    │   |   └── Address.jsx
+    │   |   └── Event.jsx
+    │   |   └── Order.jsx
+    │   |   └── OrderCard.jsx
+    │   |   └── UserProfile.jsx
+    │   |   └── Profile.jsx
+    │   |   └── ProfileNavigation.jsx
     │   └── Restaurant/
     │       └── RestaurantCard.jsx
     │       └── RestaurantDetails.jsx
     │       └── ManuCard.jsx
     ├── Routers/
-    │       └── CustomerRouter.jsx
+    │   |   └── CustomerRouter.jsx
+    │   └── state/
+    │   |   └── Authentication
+    |   |   |     └── Action.js
+    |   |   |     └── ActionType.js
+    |   |   |     └── Reducer.js
     ├── Theme/
     │   └── DarkTheme.js
     ├── App.css
