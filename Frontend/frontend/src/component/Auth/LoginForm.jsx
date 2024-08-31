@@ -38,7 +38,7 @@ const LoginForm = () => {
           <Button sx={{mt:2, padding:"1"}} fullWidth type='submit' variant='contained'></Button>
         </Form>
       </Formik>
-      <Typography>
+      <Typography variant='body2' align='center' sx={{mt:3}}>
         Don't have an account?
         <Button size='small' onCLick={()=>navigate("account/register")}>
             register
