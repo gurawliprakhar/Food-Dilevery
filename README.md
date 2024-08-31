@@ -181,6 +181,7 @@ frontend/
     │   |   └── Authentication
     |   |   |     └── Action.jsx
     |   |   |     └── ActionType.jsx
+    |   |   |     └── Reducer.jsx
     ├── Theme/
     │   └── DarkTheme.js
     ├── App.css
