@@ -36,21 +36,18 @@ function RegisterForm() {
             fullWidth
             variant="outlined"
             margin="normal"
-          />
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Role</InputLabel>
+          /> 
             <Field
             as={Select}
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
+              labelId="role-simple-select-label"
+              id="role-simple-select"
               //value={age}
-              label="Age"
+              label="Role"
              // onChange={handleChange}
             >
               <MenuItem value={"ROLE_CUSTOMER"}>Customer</MenuItem>
               <MenuItem value={"ROLE_RESTAURANT_OWNER"}>Restaurant Owner</MenuItem>
             </Field>
-          </FormControl>
           <Button
             sx={{ mt: 2, padding: "1" }}
             fullWidth
