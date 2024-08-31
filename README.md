@@ -180,6 +180,7 @@ frontend/
     │   └── state/
     │   |   └── Authentication
     |   |   |     └── Action.jsx
+    |   |   |     └── ActionType.jsx
     ├── Theme/
     │   └── DarkTheme.js
     ├── App.css
