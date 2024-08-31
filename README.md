@@ -179,9 +179,9 @@ frontend/
     │   |   └── CustomerRouter.jsx
     │   └── state/
     │   |   └── Authentication
-    |   |   |     └── Action.jsx
-    |   |   |     └── ActionType.jsx
-    |   |   |     └── Reducer.jsx
+    |   |   |     └── Action.js
+    |   |   |     └── ActionType.js
+    |   |   |     └── Reducer.js
     ├── Theme/
     │   └── DarkTheme.js
     ├── App.css
