@@ -144,6 +144,8 @@ frontend/
 │   └── robots.txt
 └── src/
     ├── component/
+    │   └── config/
+    │   |    └── api.jsx
     │   └── Auth/
     │   |    └── Auth.jsx
     │   |    └── RegisterForm.jsx
