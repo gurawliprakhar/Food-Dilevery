@@ -145,7 +145,8 @@ frontend/
 └── src/
     ├── component/
     │   └── config/
-    │   |    └── api.jsx
+    │   |    └── api.js
+    │   |    └── logic.js
     │   └── Auth/
     │   |    └── Auth.jsx
     │   |    └── RegisterForm.jsx
