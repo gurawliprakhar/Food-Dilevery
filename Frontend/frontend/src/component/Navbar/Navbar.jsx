@@ -15,7 +15,7 @@ export const Navbar = () => {
     >
       <div className="lg:mr-10 cursor-pointer flex items-center space-x-4">
         <span className="logo font-semibold text-gray-300 text-2xl">
-          Velamdir Food
+         Food delivery App
         </span>
       </div>
       <div className="flex items-center space-x-2 lg:space-x-10">
