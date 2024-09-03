@@ -4,9 +4,10 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonIcon from '@mui/icons-material/Person';
 import "./Navbar.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSelector } from "react-router-dom";
 
 export const Navbar = () => {
+  const {auth}=useSelector(store=>store)
   const navigate = useNavigate()
   return (
     <Box
@@ -25,7 +26,9 @@ export const Navbar = () => {
           </IconButton>
         </div>
         <div className="">
-          {false?<Avatar sx={{ bgcolor: "white", color: "pink.A400" }}>V</Avatar>:
+          {auth.user?<Avatar sx={{ bgcolor: "white", color: "pink.A400" }}>
+            {auth.user?.fullName[0].toUpperCase()}
+            </Avatar>:
           <IconButton onClick={()=>
             navigate("/account/login")
           }>

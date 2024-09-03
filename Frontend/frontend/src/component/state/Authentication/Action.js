@@ -7,7 +7,10 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
   ADD_TO_FAVORITE_REQUEST,
+  addToFavorite_Failure,
   GET_USER_REQUEST,
+  GET_USER_FAILURE,
+  GET_USER_SUCCESS,
   ADD_TO_FAVORITE_SUCCESS,
 } from "/ActionType";
 import { api, API_URL, restaurantID } from "../../config/api";
@@ -28,7 +31,7 @@ export const registerUser = (reqData) => async (dispatch) => {
     dispatch({ type: REGISTER_SUCCESS, payload: data.jwt });
     console.log("register profile", data);
   } catch (error) {
-   dispatch({type:REGISTER_FAILURE, payload:error})
+    dispatch({ type: REGISTER_FAILURE, payload: error });
     console.log("error", error);
   }
 };
@@ -49,22 +52,23 @@ export const loginUser = (reqData) => async (dispatch) => {
     dispatch({ type: LOGIN_SUCCESS, payload: data });
     console.log("login profile", data);
   } catch (error) {
-   dispatch({type:LOGIN_FAILURE, payload:error})
+    dispatch({ type: LOGIN_FAILURE, payload: error });
     console.log("error", error);
   }
 };
 
-export const getUser = (jwt, restaurantID) => async (dispatch) => {
+export const getUser = (jwt) => async (dispatch) => {
   dispatch({ type: GET_USER_REQUEST });
   try {
-    const { data } = await api.get(`${API_URL}/auth/signin`, {
+    const { data } = await api.get(`/api/user/profile`, {
       headers: {
         Authorization: `Bearer ${jwt}`,
       },
     });
-    dispatch({ type: LOGIN_SUCCESS, payload: data.jwt });
+    dispatch({ type: GET_USER_SUCCESS, payload: data });
     console.log("user profile", data);
   } catch (error) {
+    dispatch({ type: GET_USER_FAILURE, payload: error });
     console.log("error", error);
   }
 };
@@ -84,12 +88,12 @@ export const addToFavorite = (jwt, restaurantID) => async (dispatch) => {
     dispatch({ type: ADD_TO_FAVORITE_SUCCESS, payload: data });
     console.log("user profile", data);
   } catch (error) {
+    dispatch({ addToFavorite_Failure, payload: error });
     console.log("Added to favorite", error);
   }
 };
 
 export const logout = () => async (dispatch) => {
-  dispatch({ type: ADD_TO_FAVORITE_REQUEST });
   try {
     localStorage.clear();
     dispatch({ type: logout });
