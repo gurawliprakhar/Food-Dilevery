@@ -185,7 +185,9 @@ frontend/
     |   |   |     └── Action.js
     |   |   |     └── ActionType.js
     |   |   |     └── Reducer.js
-    |   |   |     └── store.js
+    |   |   └── store.js
+    │   |   └── Restaurant
+    |   |   |     └── Action.js
     ├── Theme/
     │   └── DarkTheme.js
     ├── App.css
