@@ -175,9 +175,9 @@ frontend/
     │   |   └── Profile.jsx
     │   |   └── ProfileNavigation.jsx
     │   └── Restaurant/
-    │       └── RestaurantCard.jsx
-    │       └── RestaurantDetails.jsx
-    │       └── ManuCard.jsx
+    │   |   └── RestaurantCard.jsx
+    │   |   └── RestaurantDetails.jsx
+    │   |   └── ManuCard.jsx
     ├── Routers/
     │   |   └── CustomerRouter.jsx
     │   └── state/
@@ -185,6 +185,7 @@ frontend/
     |   |   |     └── Action.js
     |   |   |     └── ActionType.js
     |   |   |     └── Reducer.js
+    |   |   |     └── store.js
     ├── Theme/
     │   └── DarkTheme.js
     ├── App.css
