@@ -1,51 +1,131 @@
-export const CREATE_RESTAURANT_REQUEST = "CREATE_RESTAURANT_REQUEST"
-export const CREATE_RESTAURANT_SUCCESS = "CREATE_RESTAURANT_SUCCESS"
-export const CREATE_RESTAURANT_FAILURE = "CREATE_RESTAURANT_FAILURE"
+import * as actionTypes from "./ActionTypes";
 
-export const GET_ALL_RESTAURANT_REQUEST = "GET_ALL_RESTAURANT_REQUEST";
-export const GET_ALL_RESTAURANT_SUCCESS = "GET_ALL_RESTAURANT_SUCCESS";
-export const GET_ALL_RESTAURANT_FAILURE = "GET_ALL_RESTAURANT_REQUEST";
+const initialState = {
+    restuarants: [], // Typo here, should be 'restaurants'
+    usersRestaurant: null,
+    restaurants: null,
+    loading: false,
+    error: null,
+    events: [],
+    restuarantsEvents: [], // Typo here, should be 'restaurantsEvents'
+    categories: [],
+};
 
-export const DELETE_RESTAURANT_REQUEST = "DELETE_RESTAURANT_REQUEST";
-export const DELETE_RESTAURANT_SUCCESS = "DELETE_RESTAURANT_SUCCESS";
-export const DELETE_RESTAURANT_FAILURE = "DELETE_RESTAURANT_FAILURE";
+const restaurantReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case actionTypes.CREATE_RESTAURANT_REQUEST:
+        case actionTypes.GET_ALL_RESTAURANT_REQUEST:
+        case actionTypes.DELETE_RESTAURANT_REQUEST:
+        case actionTypes.UPDATE_RESTAURANT_REQUEST:
+        case actionTypes.GET_RESTAURANT_BY_ID_REQUEST:
+        case actionTypes.CREATE_CATEGORY_REQUEST:
+        case actionTypes.GET_RESTAURANT_CATEGORY_REQUEST:
+            return {
+                ...state,
+                loading: true,
+                error: null,
+            };
 
-export const UPDATE_RESTAURANT_REQUEST = "UPDATE_RESTAURANT_REQUEST";
-export const UPDATE_RESTAURANT_SUCESS = "UPDATE_RESTAURANT_SUCESS";
-export const UPDATE_RESTAURANT_FAILURE = "UPDATE_RESTAURANT_FAILURE";
+        case actionTypes.CREATE_RESTAURANT_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                usersRestaurant: action.payload,
+            };
 
-export const GET_RESTAURANT_BY_ID_REQUEST = "GET_RESTAURANT_BY_ID_REQUEST";
-export const GET_RESTAURANT_BY_ID_SUCCESS = "GET_RESTAURANT_BY_ID_SUCCESS";
-export const GET_RESTAURANT_BY_ID_FAILURE = "GET_RESTAURANT_BY_ID_FAILURE";
+        case actionTypes.GET_ALL_RESTAURANT_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                restaurants: action.payload,
+            };
 
-export const GET_RESTAURANT_BY_USER_ID_REQUEST = "GET_RESTAURANT_BY_USER_ID_REQUEST";
-export const GET_RESTAURANT_BY_USER_ID_SUCCESS = "GET_RESTAURANT_BY_USER_ID_SUCCESS";
-export const GET_RESTAURANT_BY_USER_ID_FAILURE = "GET_RESTAURANT_BY_USER_ID_FAILURE";
+        case actionTypes.GET_RESTAURANT_BY_ID_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                restaurants: action.payload,
+            };
 
-export const UPDATE_RESTAURANT_STATUS_REQUEST =  "UPDATE_RESTAURANT_STATUS_REQUEST";
-export const UPDATE_RESTAURANT_STATUS_SUCESS =  "UPDATE_RESTAURANT_STATUS_SUCESS";
-export const UPDATE_RESTAURANT_STATUS_FAILURE =  "UPDATE_RESTAURANT_STATUS_FAILURE";
+        case actionTypes.GET_RESTAURANT_BY_USER_ID_SUCCESS:
+        case actionTypes.UPDATE_RESTAURANT_STATUS_SUCCESS: 
+        case actionTypes.UPDATE_RESTAURANT_SUCCESS: 
+            return {
+                ...state,
+                loading: false,
+                usersRestaurant: action.payload,
+            };
 
-export const CREATE_EVENTS_REQUEST = "CREATE_EVENTS_REQUEST";
-export const CREATE_EVENTS_SUCCESS = "CREATE_EVENTS_REQUEST"
-export const CREATE_EVENTS_FAILURE = "CREATE_EVENTS_FAILURE"
+        case actionTypes.DELETE_RESTAURANT_SUCCESS:
+            return {
+                ...state,
+                error: null,
+                loading: false,
+                restaurants: state.restaurants.filter(
+                    (item) => item.id !== action.payload
+                ),
+                usersRestaurant: state.usersRestaurant && state.usersRestaurant.filter( 
+                    (item) => item.id !== action.payload
+                ),
+            };
 
-export const GET_ALL_EVENTS_REQUEST = "GET_ALL_EVENTS_REQUEST"
-export const GET_ALL_EVENTS_SUCCESS = "GET_ALL_EVENTS_SUCCESS"
-export const GET_ALL_EVENTS_FAILURE = "GET_ALL_EVENTS_FAILURE"
+        case actionTypes.CREATE_EVENTS_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                events: [...state.events, action.payload],
+                restaurantsEvents: [...state.restaurantsEvents, action.payload], 
+                        };
 
-export const DELETE_EVENTS_REQUEST = "DELETE_EVENTS_REQUEST";
-export const DELETE_EVENTS_SUCCESS = "DELETE_EVENTS_SUCCESS";
-export const DELETE_EVENTS_FAILURE = "DELETE_EVENTS_FAILURE";
+        case actionTypes.GET_ALL_EVENTS_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                events: action.payload, 
+                restaurantsEvents: action.payload,
+            };
 
-export const GET_RESTAURANT_EVENTS_REQUEST = "GET_RESTAURANT_EVENTS_REQUEST";
-export const GET_RESTAURANT_EVENTS_SUCCESS = "GET_RESTAURANT_EVENTS_SUCCESS";
-export const GET_RESTAURANT_EVENTS_FAILURE = "GET_RESTAURANT_EVENTS_FAILURE";
+        case actionTypes.DELETE_EVENTS_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                events: state.events.filter((item) => item.id !== action.payload),
+                restaurantsEvents: state.restaurantsEvents.filter( 
+                    (item) => item.id !== action.payload
+                ),
+            };
 
-export const CREATE_CATEGORY_REQUEST = "CREATE_CATEGORY_REQUEST";
-export const CREATE_CATEGORY_SUCCESS = "CREATE_CATEGORY_SUCCESS";
-export const CREATE_CATEGORY_FAILURE = "CREATE_CATEGORY_FAILURE";
+        case actionTypes.CREATE_CATEGORY_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                categories: [...state.categories, action.payload],
+            };
 
-export const GET_RESTAURANT_CATEGORY_REQUEST = "GET_RESTAURANT_CATEGORY_REQUEST";
-export const GET_RESTAURANT_CATEGORY_SUCCESS = "GET_RESTAURANT_CATEGORY_SUCCESS";
-export const GET_RESTAURANT_CATEGORY_FAILURE = "GET_RESTAURANT_CATEGORY_FAILURE";
+        case actionTypes.GET_RESTAURANT_BY_USER_ID_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                categories: action.payload, 
+            };
+
+        case actionTypes.CREATE_RESTAURANT_FAILURE:
+        case actionTypes.GET_ALL_RESTAURANT_FAILURE:
+        case actionTypes.DELETE_RESTAURANT_FAILURE:
+        case actionTypes.UPDATE_RESTAURANT_FAILURE:
+        case actionTypes.GET_RESTAURANT_BY_ID_FAILURE:
+        case actionTypes.CREATE_EVENTS_FAILURE:
+        case actionTypes.CREATE_CATEGORY_FAILURE:
+        case actionTypes.GET_RESTAURANT_CATEGORY_FAILURE:
+            return {
+                ...state,
+                loading: false,
+                error: action.payload,
+            };
+
+        default:
+            return state;
+    }
+};
+
+export default restaurantReducer;
