@@ -163,7 +163,7 @@ frontend/
     │   |    └── MutiItemCarasoul.jsx
     │   └── Navbar/
     │   |    └── Navbar.js
-    │   |   └── Navbar.css
+    │   |    └── Navbar.css
     │   └── Profile/
     │   |   └── EventCards.jsx
     │   |   └── Favorites.jsx
@@ -186,6 +186,10 @@ frontend/
     |   |   |     └── ActionType.js
     |   |   |     └── Reducer.js
     |   |   └── store.js
+    │   |   └── Manu
+    |   |   |     └── Action.js
+    |   |   |     └── ActionType.js
+    |   |   |     └── Reducer.js
     │   |   └── Restaurant
     |   |   |     └── Action.js
     |   |   |     └── ActionType.js
